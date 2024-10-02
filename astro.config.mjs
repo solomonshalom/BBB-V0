@@ -1,11 +1,11 @@
 import { defineConfig } from 'astro/config';
 import partytown from '@astrojs/partytown';
 
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [partytown()],
-  output: 'static',
+  output: 'server',
   adapter: vercel()
 });
